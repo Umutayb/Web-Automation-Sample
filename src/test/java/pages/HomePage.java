@@ -14,7 +14,7 @@ public class HomePage {
     @FindBy(css = "[class='card mt-4 top-card']")
     public List<WebElement> categoryCards;
 
-    public void clickCategoryCard(String cardName){
+    public void clickCategoryCardNamed(String cardName){
         for (WebElement card:categoryCards) {
             if (card.getText().contains(cardName)){
                 actions.clickElement(card);
