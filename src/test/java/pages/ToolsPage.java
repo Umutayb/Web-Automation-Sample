@@ -3,14 +3,14 @@ package pages;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.Actions;
+import utils.Utilities;
 import utils.Printer;
 import java.util.List;
 import static resources.Colors.*;
 
 public class ToolsPage {
 
-    Actions actions = new Actions();
+    Utilities utils = new Utilities();
     Printer log = new Printer();
 
     @FindBy(css = "[class='accordion'] [class='element-group']")
@@ -36,34 +36,34 @@ public class ToolsPage {
 
     public void clickSubmit(){
         log.print("Clicking submit button","info");
-        actions.clickElement(submitButton);
+        utils.clickElement(submitButton);
     }
 
     public void fillNameInput(String text){
         log.print("Filling name input with "+BLUE+text,"info");
-        actions.clearFillInput(nameInput, text);
+        utils.clearFillInput(nameInput, text, true);
     }
 
     public void fillEmailInput(String text){
         log.print("Filling email input with "+BLUE+text,"info");
-        actions.clearFillInput(emailInput, text);
+        utils.clearFillInput(emailInput, text, true);
     }
 
     public void fillCurrentAddressInput(String text){
         log.print("Filling current address input with "+BLUE+text,"info");
-        actions.clearFillInput(currentAddressInput, text);
+        utils.clearFillInput(currentAddressInput, text, true);
     }
 
     public void fillPermanentAddressInput(String text){
         log.print("Filling permanent address input with "+BLUE+text,"info");
-        actions.clearFillInput(permanentAddressInput, text);
+        utils.clearFillInput(permanentAddressInput, text, true);
     }
 
     public void selectToolTypeNamed(String toolType){
         log.print("Clicking tool type named "+BLUE+toolType,"info");
         for (WebElement card:toolTypes) {
             if (card.getText().contains(toolType)){
-                actions.clickElement(card);
+                utils.clickElement(card);
                 return;
             }
         }
@@ -74,7 +74,7 @@ public class ToolsPage {
         log.print("Clicking tool named "+BLUE+toolType,"info");
         for (WebElement card:tools) {
             if (card.getText().contains(toolType)){
-                actions.clickElement(card);
+                utils.clickElement(card);
                 return;
             }
         }

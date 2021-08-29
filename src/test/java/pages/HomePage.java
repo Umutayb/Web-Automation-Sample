@@ -3,14 +3,14 @@ package pages;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import utils.Actions;
+import utils.Utilities;
 import utils.Printer;
 import java.util.List;
 import static resources.Colors.*;
 
 public class HomePage {
 
-    Actions actions = new Actions();
+    Utilities utils = new Utilities();
     Printer log = new Printer();
 
     @FindBy(css = "[class='card mt-4 top-card']")
@@ -20,7 +20,7 @@ public class HomePage {
         log.print("Clicking card named "+BLUE+cardName,"info");
         for (WebElement card:categoryCards) {
             if (card.getText().contains(cardName)){
-                actions.clickElement(card);
+                utils.clickElement(card);
                 return;
             }
         }
