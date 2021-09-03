@@ -1,13 +1,11 @@
 package steps;
 
 import com.thoughtworks.gauge.Step;
-import org.openqa.selenium.support.PageFactory;
 import pages.HomePage;
-import utils.driver.Driver;
 
-public class HomePageSteps extends Driver {
+public class HomePageSteps {
 
-    HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+    HomePage homePage = new HomePage();
 
     @Step("Click category card named <cardName>")
     public void clickCategoryCard(String cardName) {

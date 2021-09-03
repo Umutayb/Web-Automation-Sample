@@ -4,7 +4,7 @@
 
     <groupId>bora</groupId>
     <artifactId>Web-Automation</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
 
     <name>Web Automation</name>
     <url>https://github.com/Umutayb/Web-Automation-Sample.git</url>
@@ -18,9 +18,9 @@
         <!-- Framework -->
         <dependency>
             <groupId>bora</groupId>
-            <artifactId>POM-Framework-0.0.1.jar</artifactId>
-            <version>0.0.1</version>
-            <systemPath>${project.basedir}/lib/POM-FRAMEWORK-0.0.1.jar</systemPath>
+            <artifactId>POM-Framework-0.0.2.jar</artifactId>
+            <version>0.0.2</version>
+            <systemPath>${project.basedir}/lib/POM-FRAMEWORK-0.0.2.jar</systemPath>
             <scope>system</scope>
             <type>jar</type>
         </dependency>

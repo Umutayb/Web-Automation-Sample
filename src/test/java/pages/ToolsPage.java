@@ -8,9 +8,8 @@ import utils.Printer;
 import java.util.List;
 import static resources.Colors.*;
 
-public class ToolsPage {
+public class ToolsPage extends Utilities{
 
-    Utilities utils = new Utilities();
     Printer log = new Printer();
 
     @FindBy(css = "[class='accordion'] [class='element-group']")
@@ -36,34 +35,34 @@ public class ToolsPage {
 
     public void clickSubmit(){
         log.print("Clicking submit button","info");
-        utils.clickElement(submitButton);
+        clickElement(submitButton);
     }
 
     public void fillNameInput(String text){
         log.print("Filling name input with "+BLUE+text,"info");
-        utils.clearFillInput(nameInput, text, true);
+        clearFillInput(nameInput, text, true);
     }
 
     public void fillEmailInput(String text){
         log.print("Filling email input with "+BLUE+text,"info");
-        utils.clearFillInput(emailInput, text, true);
+        clearFillInput(emailInput, text, true);
     }
 
     public void fillCurrentAddressInput(String text){
         log.print("Filling current address input with "+BLUE+text,"info");
-        utils.clearFillInput(currentAddressInput, text, true);
+        clearFillInput(currentAddressInput, text, true);
     }
 
     public void fillPermanentAddressInput(String text){
         log.print("Filling permanent address input with "+BLUE+text,"info");
-        utils.clearFillInput(permanentAddressInput, text, true);
+        clearFillInput(permanentAddressInput, text, true);
     }
 
     public void selectToolTypeNamed(String toolType){
         log.print("Clicking tool type named "+BLUE+toolType,"info");
         for (WebElement card:toolTypes) {
             if (card.getText().contains(toolType)){
-                utils.clickElement(card);
+                clickElement(card);
                 return;
             }
         }
@@ -74,7 +73,7 @@ public class ToolsPage {
         log.print("Clicking tool named "+BLUE+toolType,"info");
         for (WebElement card:tools) {
             if (card.getText().contains(toolType)){
-                utils.clickElement(card);
+                clickElement(card);
                 return;
             }
         }

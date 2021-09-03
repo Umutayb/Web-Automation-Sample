@@ -8,9 +8,8 @@ import utils.Printer;
 import java.util.List;
 import static resources.Colors.*;
 
-public class HomePage {
+public class HomePage extends Utilities{
 
-    Utilities utils = new Utilities();
     Printer log = new Printer();
 
     @FindBy(css = "[class='card mt-4 top-card']")
@@ -20,7 +19,7 @@ public class HomePage {
         log.print("Clicking card named "+BLUE+cardName,"info");
         for (WebElement card:categoryCards) {
             if (card.getText().contains(cardName)){
-                utils.clickElement(card);
+                clickElement(card);
                 return;
             }
         }

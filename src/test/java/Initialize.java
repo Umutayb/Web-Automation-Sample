@@ -4,11 +4,10 @@ import utils.PropertiesReader;
 import utils.StringUtilities;
 import utils.driver.Driver;
 
-public class Initialize {
+public class Initialize extends Utilities{
 
     PropertiesReader reader = new PropertiesReader("properties-from-pom.properties");
     StringUtilities strUtils = new StringUtilities();
-    Utilities utils = new Utilities();
     Driver driver = new Driver();
 
     @BeforeSpec
@@ -20,7 +19,7 @@ public class Initialize {
     @AfterSpec
     public void terminate(ExecutionContext context){
         if (context.getCurrentSpecification().getIsFailing())
-            utils.captureScreen(context.getCurrentSpecification().getName());
+            captureScreen(context.getCurrentSpecification().getName());
         driver.teardown();
     }
 }

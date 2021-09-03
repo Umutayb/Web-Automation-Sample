@@ -1,13 +1,11 @@
 package steps;
 
 import com.thoughtworks.gauge.Step;
-import org.openqa.selenium.support.PageFactory;
 import pages.ToolsPage;
-import utils.driver.Driver;
 
-public class ToolsPageSteps extends Driver {
+public class ToolsPageSteps {
 
-    ToolsPage toolsPage = PageFactory.initElements(driver, ToolsPage.class);
+    ToolsPage toolsPage = new ToolsPage();
 
     @Step("Click tool named <toolName>")
     public void clickToolNamed(String toolName) {toolsPage.selectToolNamed(toolName);}
