@@ -4,7 +4,7 @@ import utils.PropertiesReader;
 import utils.StringUtilities;
 import utils.driver.Driver;
 
-public class Initialize extends Utilities{
+public class Initialize extends Utilities {
 
     PropertiesReader reader = new PropertiesReader("properties-from-pom.properties");
     StringUtilities strUtils = new StringUtilities();
