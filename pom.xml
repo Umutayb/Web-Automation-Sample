@@ -17,12 +17,9 @@
     <dependencies>
         <!-- Framework -->
         <dependency>
-            <groupId>bora</groupId>
-            <artifactId>POM-Framework-0.0.2.jar</artifactId>
+            <groupId>com.github.Umutayb</groupId>
+            <artifactId>Gaugelib</artifactId>
             <version>0.0.2</version>
-            <systemPath>${project.basedir}/lib/POM-FRAMEWORK-0.0.2.jar</systemPath>
-            <scope>system</scope>
-            <type>jar</type>
         </dependency>
 
         <!-- Selenium -->
@@ -126,6 +123,13 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
